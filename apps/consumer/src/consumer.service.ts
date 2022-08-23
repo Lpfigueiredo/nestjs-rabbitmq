@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { OrderCreatedEvent } from './order-created.event';
 
 @Injectable()
 export class ConsumerService {
-  getHello(): string {
-    return 'Hello World!';
+  handleOrderCreated(data: OrderCreatedEvent) {
+    console.log(data);
   }
 }
